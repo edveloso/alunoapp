@@ -9,6 +9,10 @@
 <body>
 
    <h1>Veio do controller</h1>
+   
+   <h2> ${msg}  </h2>
+   
+   <h2> ${data}   </h2>
 
 </body>
 </html>
