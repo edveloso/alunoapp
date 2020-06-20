@@ -44,7 +44,15 @@
 			       <td>${aluno.codigo}</td>
 			       <td>${aluno.nome} </td>
 			       <td>${aluno.email}</td>
-			       <td>Editar | Deletar</td>
+			       <td>
+			         <a href='<c:url value="/formedit/${aluno.codigo}" />' > 
+			                 <button type="button" class="btn btn-primary" >Editar</button> </a>
+			       
+			         <a href='<c:url value="/delete/${aluno.codigo}" />' > 
+			                 <button type="button" class="btn btn-danger" >Excluir</button> </a>
+			       
+			       
+			       </td>
 			    </tr>
 			    
 			    </c:forEach>
