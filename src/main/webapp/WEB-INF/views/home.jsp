@@ -13,6 +13,37 @@
    <h2> ${msg}  </h2>
    
    <h2> ${data}   </h2>
+   
+   
+   <form action="salvar"  method="post" >
+   
+   	<p>
+       <label>Nome</label>
+       <input type="text" name="nome" >
+    </p>
+    
+      
+   	<p>
+       <label>Email</label>
+       <input type="text" name="email" >
+    </p>   
+    
+    
+    <input type="submit" value="Enviar">
+          
+   
+   </form>
+   
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
