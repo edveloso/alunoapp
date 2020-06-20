@@ -22,7 +22,7 @@
 		<property name="jpaDialect" ref="jpaDialect" />
 		<property name="jpaProperties">
 			<props>
-				<prop key="hibernate.hbm2ddl.auto">create-drop</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 			</props>
 		</property>
 	</bean>

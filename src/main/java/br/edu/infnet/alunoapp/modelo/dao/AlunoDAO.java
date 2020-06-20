@@ -1,5 +1,7 @@
 package br.edu.infnet.alunoapp.modelo.dao;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -23,6 +25,10 @@ public class AlunoDAO {
 
 	public void setEm(EntityManager em) {
 		this.em = em;
+	}
+
+	public List<Aluno> listarTodos() {
+		return em.createQuery("select a from Aluno a").getResultList();
 	}
 	
 }

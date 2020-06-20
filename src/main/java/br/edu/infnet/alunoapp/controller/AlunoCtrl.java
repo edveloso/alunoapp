@@ -1,6 +1,7 @@
 package br.edu.infnet.alunoapp.controller;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,26 +19,24 @@ public class AlunoCtrl {
 	private AlunoService service;
 
 	@RequestMapping( value = "/", method = RequestMethod.GET )
-	public String hello(Model model) {
-		model.addAttribute("msg", "Ola mvc");
-		model.addAttribute("data", new Date());
-		return "home";
+	public String listaAlunos(Model model) {
+		List<Aluno> alunos =   service.listAll();		
+		model.addAttribute("alunos", alunos);
+		return "alunos/lista";
 	}
+	
+	
+	@RequestMapping( value = "/cadastro", method = RequestMethod.GET )
+	public String form(Model model) {		
+		return "alunos/form";
+	}
+	
 	
 	@RequestMapping(value = "/salvar", method = RequestMethod.POST)
 	public String salvar(Model model, Aluno aluno ) {
-		//salvar aluno no banco
-		service.salvar(aluno);
-		model.addAttribute("aluno", aluno);
-		return "lista";
+		service.salvar(aluno);		
+		return "redirect:/";
 	}
 
-	public AlunoService getService() {
-		return service;
-	}
-
-	public void setService(AlunoService service) {
-		this.service = service;
-	}
 	
 }
