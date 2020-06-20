@@ -33,5 +33,10 @@ public class AlunoService {
 		//testar se o string nao é null
 		return dao.getAluno(Integer.valueOf(id));
 	}
+
+	@Transactional
+	public void delete(String id) {
+		dao.delete(getAluno(id));
+	}
 	
 }

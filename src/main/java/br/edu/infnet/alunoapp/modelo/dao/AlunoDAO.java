@@ -34,5 +34,9 @@ public class AlunoDAO {
 	public List<Aluno> listarTodos() {
 		return em.createQuery("select a from Aluno a").getResultList();
 	}
+
+	public void delete(Aluno aluno) {
+		em.remove(aluno);
+	}
 	
 }
