@@ -13,7 +13,6 @@ import org.springframework.web.servlet.view.JstlView;
 //@Controller
 //@Repository	
 	
-
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "br.edu.infnet.alunoapp")
