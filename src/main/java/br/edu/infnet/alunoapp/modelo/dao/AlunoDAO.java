@@ -16,11 +16,15 @@ public class AlunoDAO {
 	private EntityManager em;
 	
 	public void salvar(Aluno aluno) {
-		em.persist(aluno);
+		em.merge(aluno);
 	}
 
 	public EntityManager getEm() {
 		return em;
+	}
+	
+	public Aluno getAluno(Integer id) {
+		return em.find(Aluno.class, id);
 	}
 
 	public void setEm(EntityManager em) {

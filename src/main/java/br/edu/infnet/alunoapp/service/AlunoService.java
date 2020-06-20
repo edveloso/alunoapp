@@ -28,5 +28,10 @@ public class AlunoService {
 	public List<Aluno> listAll() {
 		return dao.listarTodos();
 	}
+
+	public Aluno getAluno(String id) {
+		//testar se o string nao é null
+		return dao.getAluno(Integer.valueOf(id));
+	}
 	
 }

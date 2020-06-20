@@ -20,13 +20,14 @@
 
 	<div class="container">
 
-
-		<h1>Cadastro de alunos</h1>
+		<h1>${tipoForm} alunos</h1>
 		<h3>   
 		    <a href='<c:url value="/" />' > Voltar a listagem </a>
 		</h3>
 		
 		<form action='<c:url value="/salvar" />'  method="post">
+		
+		   <input  type="hidden" name="codigo" value="${aluno.codigo}">
 		
 		   <div class="input-group mb-3" >
 		   	   <label>Nome</label>
@@ -34,6 +35,7 @@
 		   	      type="text"
 		   	      class="form-control"
 		   	      name="nome"
+		   	      value="${aluno.nome}"
 		   	   >		   
 		   </div>
 		   
@@ -43,6 +45,7 @@
 		   	      type="text"
 		   	      class="form-control"
 		   	      name="email"
+		   	      value="${aluno.email}"
 		   	   >		   
 		   </div>
 		   
