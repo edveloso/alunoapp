@@ -1,7 +1,15 @@
 package br.edu.infnet.alunoapp.modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Aluno {
 
+	@Id
+	@GeneratedValue
+	private Integer codigo;
 	
 	private String nome;
 	
@@ -26,6 +34,14 @@ public class Aluno {
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", email=" + email + "]";
+	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 	
 	
