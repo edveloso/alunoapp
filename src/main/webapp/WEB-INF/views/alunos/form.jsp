@@ -26,35 +26,37 @@
 		</div>
 
 		<h1>${tipoForm} alunos</h1>
-		<h3>   
-		    <a href='<c:url value="/" />' > Voltar a listagem </a>
-		</h3>
+		
 		
 		<form action='<c:url value="/salvar" />'  method="post">
 		
 		   <input  type="hidden" name="codigo" value="${aluno.codigo}">
 		
 		   <div class="form-group" >
-		   	   <label>Nome</label>
+		   	   <label for="nome">Nome</label>
 		   	   <input
 		   	      type="text"
 		   	      class="form-control"
 		   	      name="nome"
+		   	      id="nome"
 		   	      value="${aluno.nome}"
 		   	   >		   
 		   </div>
 		   
 		   <div class="form-group" >
-		   	   <label>Email</label>
+		   	   <label  for="email">Email</label>
 		   	   <input
 		   	      type="text"
 		   	      class="form-control"
 		   	      name="email"
+		   	      id="email"
 		   	      value="${aluno.email}"
 		   	   >		   
 		   </div>
 		   
 		   <input type="submit"  class="btn btn-primary" value="Salvar" >  
+		  
+		    <a class="btn btn-secondary" href='<c:url value="/" />' > Voltar a listagem </a>
 		
 		
 		</form>
