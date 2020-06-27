@@ -19,6 +19,11 @@
 
 
 	<div class="container">
+	
+		<div class="jumbotron">
+		   <h1>Aplicacao com springmvc</h1>
+		   <h3>Com configuracao manual</h3>
+		</div>
 
 		<h1>${tipoForm} alunos</h1>
 		<h3>   
@@ -29,7 +34,7 @@
 		
 		   <input  type="hidden" name="codigo" value="${aluno.codigo}">
 		
-		   <div class="input-group mb-3" >
+		   <div class="form-group" >
 		   	   <label>Nome</label>
 		   	   <input
 		   	      type="text"
@@ -39,7 +44,7 @@
 		   	   >		   
 		   </div>
 		   
-		   <div class="input-group mb-3" >
+		   <div class="form-group" >
 		   	   <label>Email</label>
 		   	   <input
 		   	      type="text"

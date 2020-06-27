@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
-	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,47 +20,50 @@
 
 	<div class="container">
 
+		<div class="jumbotron">
+			<h1>Aplicacao com springmvc</h1>
+			<h3>Com configuracao manual</h3>
+		</div>
 
-		<h1>Listagem de alunos</h1>
-		<h3>   
-		    <a href='<c:url value="/cadastro" />' > Cadastrar novo aluno </a>
-		</h3>
-		
-		
-		<table class="table" >
+		<div class="d-flex justify-content-between">
+			<h1>Listagem de alunos</h1>
+			<h3>
+				<a class="btn btn-primary" href='<c:url value="/cadastro" />'> Cadastrar novo aluno </a>
+			</h3>
+
+		</div>
+
+
+		<table class="table">
 			<thead>
-			   <tr>
-			      <th>Codigo</th>
-			      <th>Nome</th>
-			      <th>Email</th>
-			      <th>Ações</th>
-			   </tr>
+				<tr>
+					<th>Codigo</th>
+					<th>Nome</th>
+					<th>Email</th>
+					<th>Ações</th>
+				</tr>
 			</thead>
-			
+
 			<tbody>
-			  <c:forEach var="aluno" items="${alunos}" >  
-			
-			    <tr>
-			       <td>${aluno.codigo}</td>
-			       <td>${aluno.nome} </td>
-			       <td>${aluno.email}</td>
-			       <td>
-			         <a href='<c:url value="/formedit/${aluno.codigo}" />' > 
-			                 <button type="button" class="btn btn-primary" >Editar</button> </a>
-			       
-			         <a href='<c:url value="/delete/${aluno.codigo}" />' > 
-			                 <button type="button" class="btn btn-danger" >Excluir</button> </a>
-			       
-			       
-			       </td>
-			    </tr>
-			    
-			    </c:forEach>
-			    
-			
+				<c:forEach var="aluno" items="${alunos}">
+
+					<tr>
+						<td>${aluno.codigo}</td>
+						<td>${aluno.nome}</td>
+						<td>${aluno.email}</td>
+						<td><a href='<c:url value="/formedit/${aluno.codigo}" />'>
+								<button type="button" class="btn btn-primary">Editar</button>
+						</a> <a href='<c:url value="/delete/${aluno.codigo}" />'>
+								<button type="button" class="btn btn-danger">Excluir</button>
+						</a></td>
+					</tr>
+
+				</c:forEach>
+
+
 			</tbody>
-		
-		
+
+
 		</table>
 
 
