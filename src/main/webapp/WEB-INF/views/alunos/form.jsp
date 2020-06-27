@@ -13,7 +13,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 	crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
 	<div class="container">
 	
 		<div class="jumbotron">
-		   <h1>Aplicacao com springmvc</h1>
+		   <h1> <i class="fa fa-tachometer" aria-hidden="true"></i> Aplicacao com springmvc</h1>
 		   <h3>Com configuracao manual</h3>
 		</div>
 
@@ -56,7 +56,7 @@
 		   
 		   <input type="submit"  class="btn btn-primary" value="Salvar" >  
 		  
-		    <a class="btn btn-secondary" href='<c:url value="/" />' > Voltar a listagem </a>
+		    <a class="btn btn-secondary" href='<c:url value="/" />' ><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Voltar a listagem </a>
 		
 		
 		</form>
