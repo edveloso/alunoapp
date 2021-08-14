@@ -22,7 +22,7 @@
 
 
 		<div class="jumbotron">
-		   <h1> <i class="fa fa-tachometer" aria-hidden="true"></i> Aplicacao com springmvc</h1>
+		   <h1> <i class="fa fa-tachometer" aria-hidden="true"></i> Aplicacao com springmvc na aula de DEVOPS</h1>
 		   <h3>Com configuracao manual</h3>
 		</div>
 
