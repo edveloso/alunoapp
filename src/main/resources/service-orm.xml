@@ -49,7 +49,7 @@
 		<property name="url"
 			value="jdbc:mysql://localhost:3306/aulaweb?createDatabaseIfNotExist=true&amp;useSSL=false" />
 		<property name="username" value="test" />
-		<property name="password" value="12345678" />
+		<property name="password" value="Mn12345678-" />
 	</bean>
 	
 
